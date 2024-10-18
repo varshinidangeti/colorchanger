@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s, color 0.5s; /* Smooth transition */
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s; /* Smooth button effects */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: scale(1.05); /* Slightly grow button on hover */
+        }
+
+        button:active {
+            transform: scale(0.95); /* Slightly shrink button on click */
+        }
+    </style>
+</head>
+<body>
+    <button onclick="colorChanger()">Click</button>
+
+    <script>
+        function colorChanger() {
+            if (document.body.style.backgroundColor === 'black') {
+                document.body.style.backgroundColor = 'white';
+                document.body.style.color = 'black';
+            } else {
+                document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'white';
+            }
+        }
+    </script>
+</body>
+</html>
